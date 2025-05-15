@@ -44,29 +44,10 @@ How to Run
 
 Start the app and open your browser:
 
-npm start
+npm run dev
 
-Go to http://localhost:3000.
 
-How It Works
+Go to http://localhost:3000.](http://localhost:5173/)
 
-src/App.jsx has the main code.
 
-State tracks floors, number of elevators, and each elevator's position.
-
-Uses setInterval to move elevators every second.
-
-Two sets of buttons:
-
-Outside: call elevators (up/down)
-
-Inside: choose destination floor
-
-User Stories
-
-I want to call an elevator to my floor.
-
-I want to pick which floor I want inside the elevator.
-
-I want the closest elevator to come first.
 
