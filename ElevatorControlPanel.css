@@ -1,0 +1,45 @@
+/* src/ElevatorControlPanel.css */
+
+/* Control Panels (aligned to the side of the elevators) */
+.control-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  right: 20px;
+  top: 100px;
+}
+
+.control-panel {
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(65, 62, 62, 0.1);
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.floor-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.floor-button {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border: none;
+  background-color: #372525;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.floor-button:hover {
+  background-color: #bbb;
+}

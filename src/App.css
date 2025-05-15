@@ -1,0 +1,133 @@
+.page-header {
+  background-color: olive;
+  padding: 10px 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #353333;
+}
+
+.app {
+  font-family: sans-serif;
+  padding: 20px;
+  padding-top: 80px; /* 👈 This makes space below the fixed header */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.config {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.config input {
+  width: 60px;
+}
+
+.building {
+  display: flex;
+  align-items: flex-end;
+}
+
+.floor-labels {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-right: 20px;
+}
+
+.floor-label-row {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.external-buttons button {
+  margin-left: 5px;
+  padding: 4px 6px;
+}
+
+/* Container for all elevators */
+.elevator-shafts {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* Each elevator column */
+.elevator-column {
+  position: relative;
+  width: 200px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  height: calc(var(--floor-count) * var(--floor-height));
+}
+
+/* The elevator "box" */
+.elevator-box {
+  position: absolute;
+  width: 80%;
+  height: 50px; /* smaller height */
+  margin: 0 auto;
+  left: 10%;
+  transition: bottom 0.5s ease;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 6px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.elevator-info {
+  font-size: 12px;
+  font-weight: 600;
+  color: #111;
+  text-align: center;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-top: 5px;
+}
+
+.panel button {
+  background-color: #434141;
+  color: #fff;
+  border: none;
+  padding: 4px;
+  font-size: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.panel button:hover {
+  background-color: #444;
+}
