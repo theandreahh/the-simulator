@@ -13,78 +13,56 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 
-
 Gestalt Lift Simulator
 
-A React-based elevator simulation that allows users to configure the number of floors and elevators, request elevators from floors, and select destination floors from inside each elevator. The simulation animates elevators moving floor by floor, handling user requests optimally.
+A simple React app that simulates elevators in a building. You can:
 
-Features:
+Set how many floors and elevators there are
 
-Dynamic configuration of floors and elevators
+Call an elevator from any floor (up/down buttons)
 
-External controls on each floor (up/down calls)
+Pick your destination floor inside the elevator
 
-Internal controls inside each elevator (select destination floors)
+Elevators move one floor each second and pick the closest elevator.
 
-Simulated movement with realistic timing (1 second per floor)
+How to Set Up
 
-Optimal elevator assignment based on proximity and direction
-
-Installation:
-
-Clone the repository
+Get the code
 
 git clone https://github.com/theandreahh/the-simulator.git
 cd the-simulator
 
-Install dependencies:
+Install
 
 npm install
 
-Running the Application
+How to Run
 
-Start the development server
+Start the app and open your browser:
 
 npm start
 
-Open the app in your browser at http://localhost:3000
+Go to http://localhost:3000.
 
-Build for Production
+How It Works
 
-npm run build
+src/App.jsx has the main code.
 
-This will create an optimized production build in the build/ folder.
+State tracks floors, number of elevators, and each elevator's position.
 
-Code Overview: 
+Uses setInterval to move elevators every second.
 
-App.jsx: Main component managing global state (floors, elevators, requests) and rendering UI.
+Two sets of buttons:
 
-State:
+Outside: call elevators (up/down)
 
-floorsCount: Number of floors (0 = Ground).
-
-elevatorsCount: Number of elevator shafts.
-
-elevators: Array of elevator objects with currentFloor, targetFloors, direction, etc.
-
-Controls:
-
-External buttons on each floor call the nearest elevator.
-
-Internal panel inside each elevator selects target floors.
-
-Movement Logic:
-
-A setInterval updates elevator positions every second, moving them one floor towards their next target.
-
-Doors open (doorsOpen: true) when arriving at a target.
+Inside: choose destination floor
 
 User Stories
 
-As a building user, I want to call an elevator to my floor by pressing an up/down button, so that I can ride it.
+I want to call an elevator to my floor.
 
-As an elevator rider, I want to select my desired floor inside the elevator, so that I can reach my destination.
+I want to pick which floor I want inside the elevator.
 
-As a system, it should assign the nearest idle or same-direction elevator to minimize wait time.
+I want the closest elevator to come first.
 
-As a developer, I want the simulation to animate elevators moving floor-by-floor to emulate real behavior.
