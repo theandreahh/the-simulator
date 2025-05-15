@@ -13,7 +13,13 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 
-Gestalt Lift Simulator
+
+
+
+
+
+
+                                                                           Gestalt Lift Simulator
 
 A simple React app that simulates elevators in a building. You can:
 
